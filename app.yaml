@@ -1,0 +1,17 @@
+application: localpower-dev
+version: 1
+runtime: python
+api_version: 1
+
+inbound_services:
+- mail
+
+handlers:
+- url: /_ah/mail/.+
+  script: handle_mail.py
+  login: admin
+- url: /_process_mail/
+  script: process_mail.py
+  login: admin
+- url: /_send_mail/
+  script: send_mail.py
