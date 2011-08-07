@@ -19,6 +19,6 @@ class MailProcessor(webapp.RequestHandler):
             headers={'Content-Type': "text/plain"})
 
 app = webapp.WSGIApplication([
-        ('/_process_mail/', MailProcessor),
+        ('/process_mail', MailProcessor),
         ], debug=True)
 run_wsgi_app(app)

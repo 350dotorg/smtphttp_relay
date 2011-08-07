@@ -10,7 +10,7 @@ handlers:
 - url: /_ah/mail/.+
   script: handle_mail.py
   login: admin
-- url: /_process_mail/
+- url: /process_mail
   script: process_mail.py
   login: admin
 - url: /_send_mail/
